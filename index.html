@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminAssist - Información de Mi Bot de Discord</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo General */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #0D1117;
+            color: #FFFFFF;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(22, 27, 34, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #58A6FF;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #FF4081;
+            margin-top: 20px;
+            border-bottom: 2px solid #58A6FF;
+            padding-bottom: 5px;
+        }
+        .command {
+            background-color: #30363D;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+        }
+        .support-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #58A6FF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+            display: block;
+            margin: 10px 0;
+        }
+        .support-button:hover {
+            background-color: #4A9EDB;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+        .language-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+        .toggle-style {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #FFFFFF;
+            background-color: transparent;
+            border: none;
+        }
+        /* Estilo de Juegos */
+        body.games {
+            background-image: url('https://th.bing.com/th/id/R.302336b2790af9ec909db402394dc13b?rik=0cVt52ccadptOg&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        const supportID = "593455144797208584"; // Cambia esto a tu ID de Discord
+        let isFuturistic = true; // Estado del tema
+
+        function showSupportID() {
+            alert("ID de Soporte: " + supportID);
+        }
+
+        function toggleStyle() {
+            const body = document.body;
+            if (isFuturistic) {
+                body.classList.remove('futuristic');
+                body.classList.add('games');
+            } else {
+                body.classList.remove('games');
+                body.classList.add('futuristic');
+            }
+            isFuturistic = !isFuturistic; // Cambiar el estado del tema
+        }
+    </script>
+</head>
+<body class="futuristic">
+
+    <div class="container">
+        <button class="toggle-style" onclick="toggleStyle()">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <h1>AdminAssist - Mi Bot de Discord</h1>
+        <h2>Descripción</h2>
+        <p>¡Hola! Soy un bot de Discord diseñado para ayudarte a gestionar tu servidor, proporcionar diversión y mejorar la experiencia de los usuarios. Mis características incluyen comandos de moderación, juegos, y más.</p>
+
+        <h2>Información del Bot</h2>
+        <p><strong>Fecha de Creación:</strong> 19 de agosto de 2024</p>
+        <p><strong>Creador:</strong> Aleks</p>
+        <p><strong>Lenguajes de Programación:</strong> Python (próximamente también en JavaScript)</p>
+        <p><strong>Origen de la Idea:</strong> La idea surgió mientras estaba modificando mi servidor de Discord.</p>
+        <p><strong>Funcionamiento:</strong> El bot está diseñado para interactuar con los usuarios en Discord, ejecutando comandos y proporcionando respuestas automatizadas a diversas solicitudes. Utiliza programación en Python para gestionar las interacciones y realizar tareas específicas de forma eficiente.</p>
+
+        <h2>Comandos del Bot</h2>
+        <p>Aquí tienes una lista de todos los comandos disponibles:</p>
+        <div class="command">!logo - Muestra el logo del servidor.</div>
+        <div class="command">!server_stats - Muestra estadísticas del servidor.</div>
+        <div class="command">!versiones - Muestra las versiones del bot.</div>
+        <div class="command">!soporte - Envía una solicitud de soporte al equipo.</div>
+        <div class="command">!supports - Envía una solicitud de soporte al equipo.</div>
+        <div class="command">!actualizaciones - Para ver las modificaciones del bot.</div>
+        <div class="command">!sugerir - Para dar una sugerencia.</div>
+        <div class="command">!warn - Para advertir a un usuario.</div>
+        <div class="command">!ban - Para bloquear a un usuario del servidor.</div>
+        <div class="command">!ver_sugerencias - Para ver todas las sugerencias.</div>
+        <div class="command">!kick - Para expulsar a un usuario del servidor.</div>
+        <div class="command">!trivia - Para que el bot te haga preguntas, esta en desarrollo esta opción.</div>
+        <div class="command">!logo_bot - Para ver el logo del bot.</div>
+        <div class="command">!ticket - Para crear un botón para abrir ticket.</div>
+        <div class="command">Y otros que se encuentran en desarrollo.</div>
+
+        <h2>Invitación</h2>
+        <p>Puedes invitarme a tu servidor haciendo clic en el siguiente enlace:</p>
+        <p>
+            <a href="https://discord.com/oauth2/authorize?client_id=1274618357630373888&permissions=8&integration_type=0&scope=bot" target="_blank" class="support-button">Invitar Bot</a>
+        </p>
+
+        <h2>Contactar Soporte</h2>
+        <p>Si necesitas ayuda, puedes contactarme directamente a mi ID de Discord:</p>
+        <button class="support-button" onclick="showSupportID()">Contactar Soporte</button>
+    </div>
+
+    <footer>
+        <p>© 2024 AdminAssist. Todos los derechos reservados. Creado por Aleks</p>
+    </footer>
+
+</body>
+</html>
